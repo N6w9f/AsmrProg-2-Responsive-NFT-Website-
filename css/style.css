@@ -1,0 +1,517 @@
+/* Global ---------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+:root {
+  --margin: 46px 0;
+  --all-margin: 46px;
+
+  --w-color: #fff;
+  --b-color: #000000;
+  --body-color: #f1f1f1;
+  --head-color: #0f2182;
+  --light-head-color: #304ffe;
+  --paragraph-background-color: #dfdcdc;
+
+  --transition-duration: 0.3s;
+}
+::selection {
+  color: var(--body-color);
+  background: var(--b-color);
+}
+footer::selection,
+footer h1::selection,
+footer .holder nav ul li a::selection {
+  background: var(--body-color);
+  color: var(--b-color);
+}
+html {
+  scroll-behavior: smooth;
+  background-color: var(--b-color);
+}
+body {
+  background-color: var(--body-color);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Ubuntu", sans-serif;
+}
+img {
+  object-fit: cover;
+  object-position: center;
+}
+a {
+  text-decoration: none;
+  color: var(--b-color);
+}
+li {
+  list-style: none;
+}
+button {
+  width: fit-content;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 18px;
+}
+.container {
+  margin: 0 auto;
+}
+/* Components */
+/* Header ---------------------------------------- */
+header {
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+}
+header h1 {
+  color: var(--head-color);
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+header nav ul li a {
+  font-size: 18px;
+  font-weight: 500;
+  transition-duration: var(--transition-duration);
+}
+header .holder button {
+  padding: 6px 12px;
+  font-weight: 500;
+  transition-duration: var(--transition-duration);
+}
+header .holder button:first-of-type {
+  color: var(--w-color);
+  background: var(--b-color);
+  border-radius: 4px;
+}
+header nav ul li a:hover {
+  color: var(--head-color);
+}
+header .holder button:hover {
+  scale: 0.95;
+}
+header .holder button:first-of-type:hover {
+  color: var(--b-color);
+  background-color: transparent;
+}
+header .holder button:last-of-type:hover {
+  color: var(--head-color);
+}
+/* Landing ---------------------------------------- */
+.landing {
+  margin: var(--margin);
+  height: 888px;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+.landing .text {
+  font-size: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+.landing .text h1 {
+  font-size: 79px;
+}
+.landing .text h1 span {
+  color: var(--head-color);
+}
+.landing .text p {
+  font-size: 26px;
+  font-weight: 400;
+}
+.landing .text button {
+  width: 260px;
+  padding: 6px;
+  color: var(--w-color);
+  background-color: var(--b-color);
+  border-radius: 46px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition-duration: var(--transition-duration);
+}
+.landing .text button i {
+  padding: 10px;
+  color: var(--b-color);
+  background-color: var(--w-color);
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: 400;
+}
+.landing img {
+  width: 45%;
+  max-width: 600px;
+}
+.landing .text button:hover {
+  scale: 0.98;
+}
+/* Serves ---------------------------------------- */
+.serves {
+  margin: var(--margin);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.serves .serve {
+  margin: var(--topBottom-margin);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 22px;
+}
+.serves .serve .card {
+  padding: 16px;
+  background-color: var(--w-color);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+  cursor: pointer;
+  transition-duration: var(--transition-duration);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.serves .serve .card .what {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.serves .serve .card .what i {
+  font-size: 32px;
+}
+.serves .serve .card:hover {
+  scale: 1.01;
+}
+/* Projects ---------------------------------------- */
+.projects {
+  margin: var(--margin);
+}
+.projects nav {
+  margin: 28px 0;
+}
+.projects nav ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.projects nav ul li {
+  padding: 6px 16px;
+  font-weight: 500;
+  background-color: var(--paragraph-background-color);
+  border-radius: 12px;
+  transition-duration: var(--transition-duration);
+  cursor: pointer;
+}
+.projects nav ul li:hover {
+  color: var(--w-color);
+  background-color: var(--head-color);
+  scale: 0.97;
+}
+.projects .holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 22px;
+}
+.projects .holder .card {
+  padding: 16px;
+  background-color: var(--w-color);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition-duration: var(--transition-duration);
+  cursor: pointer;
+}
+.projects .holder .card img {
+  width: 100%;
+  border-radius: 12px;
+}
+.projects .holder .card h4 {
+  margin: 6px 0;
+}
+.projects .holder .card .info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.projects .holder .card .info .up,
+.projects .holder .card .info .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects .holder .card .info .up .mony {
+  color: var(--light-head-color);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.projects .holder .card .info .up .mony i {
+  font-size: 22px;
+}
+.projects .holder .card .info .up .mony h5 {
+  font-weight: 400;
+}
+.projects .holder .card .info .up > h5 {
+  color: #777;
+  font-weight: 500;
+}
+.projects .holder .card .info hr {
+  border: 1px solid var(--paragraph-background-color);
+}
+.projects .holder .card .info .bottom h5:first-of-type {
+  padding: 6px 12px;
+  background-color: var(--paragraph-background-color);
+  border-radius: 8px;
+  font-weight: 400;
+}
+.projects .holder .card .info .bottom h5:last-of-type {
+  color: var(--light-head-color);
+  transition-duration: var(--transition-duration);
+  cursor: pointer;
+}
+.projects .holder .card .info .bottom h5:last-of-type:hover {
+  scale: 0.98;
+}
+.projects > button {
+  margin-top: 34px;
+  padding: 12px;
+  background: var(--paragraph-background-color);
+  border-radius: 8px;
+  font-weight: 500;
+  position: relative;
+  left: 50%;
+  translate: -50%;
+  transition-duration: var(--transition-duration);
+}
+.projects > button:hover {
+  color: var(--paragraph-background-color);
+  background: var(--b-color);
+  scale: 0.98;
+}
+.projects .holder .card:hover {
+  scale: 1.009;
+}
+/* Sellers */
+.sellers {
+  margin: var(--margin);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.sellers .holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 22px;
+}
+.sellers .holder .card {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 12px;
+  background: var(--w-color);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: var(--transition-duration);
+}
+.sellers .holder .card .text {
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sellers .holder .card img {
+  width: 64px;
+}
+.sellers .holder .card:hover {
+  scale: 0.99;
+}
+/* Footer */
+footer a {
+  color: var(--body-color);
+}
+footer {
+  width: 100%;
+  margin: var(--margin);
+  margin-bottom: 0;
+  padding: 40px 0;
+  background-color: var(--b-color);
+  color: var(--body-color);
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 36px;
+}
+footer .container > h1 {
+  font-size: 44px;
+}
+footer .container .holder {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+footer .container .holder nav ul,
+footer .container .holder .links ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 22px;
+}
+footer .container .holder nav ul li,
+footer .container .holder .links ul li {
+  transition-duration: var(--transition-duration);
+}
+footer .container .holder nav ul li a {
+  font-weight: 600;
+  color: var(--paragraph-background-color);
+  transition-duration: var(--transition-duration);
+}
+footer .container .holder .links ul li i {
+  font-size: 46px;
+  transition-duration: var(--transition-duration);
+}
+footer .container .holder > h6 {
+  color: var(--paragraph-background-color);
+  text-align: end;
+  font-weight: 400;
+}
+footer .container .holder nav ul li:hover,
+footer .container .holder .links ul li:hover {
+  scale: 0.98;
+}
+footer .container .holder nav ul li:hover a {
+  color: var(--w-color);
+}
+footer .container .holder .links ul li:hover i {
+  color: var(--light-head-color);
+}
+/* Media */
+@media (min-width: 500px) {
+  .container {
+    padding: 0 34px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (max-width: 1199px) {
+  .landing .text {
+    gap: 58px;
+  }
+  .landing .text h1 {
+    font-size: 62px;
+  }
+  .landing .text p {
+    font-size: 24px;
+  }
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  footer .container .holder nav ul,
+  footer .container .holder .links ul {
+    justify-content: center;
+  }
+  footer .container .holder h6 {
+    text-align: center;
+  }
+}
+@media (max-width: 991px) {
+  .landing {
+    flex-direction: column;
+  }
+  .landing > img {
+    width: 100%;
+    max-width: 470px;
+  }
+  .landing .text {
+    order: 2;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+  }
+  .landing .text h1 {
+    font-size: 64px;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    flex-direction: column;
+  }
+  .landing img {
+    width: 430px;
+  }
+  .landing .text h1 {
+    font-size: 52px;
+  }
+  .landing .text p {
+    font-size: 18px;
+    width: 75%;
+  }
+}
+@media (max-width: 499px) {
+  .container {
+    padding: 0 34px;
+  }
+  .landing {
+    height: 700px;
+  }
+  .landing img {
+    width: 360px;
+  }
+  .landing .text h1 {
+    font-size: 48px;
+  }
+  .landing .text p {
+    width: 85%;
+  }
+}
+@media (max-width: 430px) {
+  .landing {
+    height: 600px;
+  }
+  .landing img {
+    width: 280px;
+  }
+  .landing .text h1 {
+    font-size: 36px;
+  }
+  .landing .text p {
+    width: 100%;
+    font-size: 14px;
+  }
+  .landing .text button i {
+    font-size: 18px;
+  }
+  footer .container > h1 {
+    font-size: 32px;
+  }
+  footer .container .holder nav ul li a {
+    font-size: 13px;
+  }
+  footer .container .holder .links ul li i {
+    font-size: 38px;
+  }
+}
